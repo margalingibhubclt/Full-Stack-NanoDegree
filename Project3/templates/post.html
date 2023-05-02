@@ -1,0 +1,21 @@
+<div class="post">
+  <div class="post-heading">
+    <div class="post-title">
+      {{p.subject}}
+    </div>
+
+    <div class="post-date">
+      {{p.created.strftime("%b %d, %Y")}}
+    </div>
+  </div>
+
+  <div class="post-content">
+    {{p._render_text | safe}}
+  </div>
+
+  <div class="post-info">
+    <a class="gray-label" href="/blog/editpost/{{p.key().id()}}">Edit</a> |
+    <a class="gray-label" href="/blog/deletepost/{{p.key().id()}}">Delete</a> | 
+    <a class="gray-label" href="">Like</a> 
+  </div>
+</div>
